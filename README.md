@@ -35,6 +35,19 @@ MVP web para triagem inteligente de leads previdenciários.
 5. Responda às perguntas para obter o encaminhamento.
 
 
+## Rodar local no Codex (Linux/macOS)
+
+1. No terminal, entre na pasta do projeto.
+2. Execute:
+
+```bash
+./run_local.sh
+```
+
+3. Abra no navegador: `http://127.0.0.1:5500/index.html`.
+
+Opcional: para outra porta, use por exemplo `./run_local.sh 8080`.
+
 ## Execução rápida no Windows
 
 1. Garanta que `index.html`, `styles.css`, `flows.js`, `app.js` e `iniciar_robo_inss.bat` estejam na mesma pasta.
