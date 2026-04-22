@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robô do INSS · MVP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <h1>Robô do INSS</h1>
+      <p>MVP web para triagem inteligente de leads previdenciários.</p>
+    </header>
+
+    <section class="card" id="lead-card">
+      <h2>1) Cadastro rápido do lead</h2>
+      <form id="lead-form" class="grid-form">
+        <label>
+          Nome
+          <input id="lead-name" type="text" required placeholder="Nome do lead" />
+        </label>
+        <label>
+          Telefone
+          <input id="lead-phone" type="tel" required placeholder="(00) 00000-0000" />
+        </label>
+        <label>
+          E-mail
+          <input id="lead-email" type="email" placeholder="nome@exemplo.com" />
+        </label>
+      </form>
+    </section>
+
+    <section class="card" id="flow-card">
+      <h2>2) Seleção de fluxo</h2>
+      <div class="flow-row">
+        <label>
+          Fluxo de atendimento
+          <select id="flow-select">
+            <option value="">Selecione um fluxo</option>
+          </select>
+        </label>
+        <button id="start-btn" class="btn btn-primary" type="button">Iniciar fluxo</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="question-card">
+      <h2>3) Perguntas sequenciais</h2>
+      <div id="progress" class="progress"></div>
+      <p id="question-text" class="question"></p>
+      <div id="answer-buttons" class="answers"></div>
+      <div class="nav">
+        <button id="back-btn" class="btn" type="button">Voltar</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="result-card">
+      <h2>4) Resultado do encaminhamento</h2>
+      <div id="result-pill" class="pill"></div>
+      <p id="result-reason" class="result-reason"></p>
+      <button id="restart-btn" class="btn btn-primary" type="button">Novo atendimento</button>
+    </section>
+
+    <section class="card" id="history-card">
+      <h2>Histórico da sessão</h2>
+      <ul id="history-list" class="history-list"></ul>
+      <p id="history-empty" class="muted">Nenhum atendimento iniciado.</p>
+    </section>
+  </main>
+
+  <script src="flows.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
